@@ -1,0 +1,54 @@
+plugins {
+	id 'java'
+	alias(libs.plugins.loomID)
+}
+
+def javaVersion = libs.versions.java.get().toInteger()
+def minecraftVersion = libs.versions.minecraft.get()
+def fabricLoaderVersion = libs.versions.fabricLoader.get()
+def modVersion = project.findProperty('modVersion') ?: 'unspecified'
+def modName = project.findProperty('modName') ?: project.name
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(javaVersion)
+		vendor = JvmVendorSpec.ADOPTIUM
+	}
+}
+
+base {
+	archivesName = "${modName}-${minecraftVersion}"
+}
+
+dependencies {
+	minecraft libs.minecraft
+	mappings loom.officialMojangMappings()
+	modImplementation libs.fabric.loader
+	modImplementation libs.fabric.api
+}
+
+tasks.named('processResources') {
+	inputs.property "modVersion", modVersion
+	inputs.property "minecraftVersion", minecraftVersion
+	inputs.property "loaderVersion", fabricLoaderVersion
+	inputs.property "javaVersion", javaVersion
+	filesMatching("fabric.mod.json") {
+		expand(
+			"version": modVersion,
+			"minecraftVersion": minecraftVersion,
+			"loaderVersion": fabricLoaderVersion,
+			"javaVersion": javaVersion
+		)
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.release = java.toolchain.languageVersion.get().asInt()
+}
+
+tasks.named('jar') {
+	def fullModName = "${modName}-${minecraftVersion}"
+	from("LICENSE") {
+		rename { "${it}_${fullModName}" }
+	}
+}
