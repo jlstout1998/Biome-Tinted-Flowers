@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "tintedflowers",
+	"version": "${version}",
+	"name": "Biome Tinted Flowers",
+	"description": "Adds biome tint to the stems and leaves of flowers",
+	"authors": [
+		"jlstout1998"
+	],
+	"contact": {
+		"homepage": "https://github.com/jlstout1998/Biome-Tinted-Flowers",
+		"issues": "https://github.com/jlstout1998/Biome-Tinted-Flowers/issues",
+		"sources": "https://github.com/jlstout1998/Biome-Tinted-Flowers"
+	},
+	"license": "MIT",
+	"icon": "assets/tintedflowers/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"mod.jstout.tintedflowers.BiomeTintedFlowers"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loaderVersion}",
+   		"fabric": "*",
+		"minecraft": ">=${minecraftVersion}",
+		"java": ">=${javaVersion}"
+	}
+}
