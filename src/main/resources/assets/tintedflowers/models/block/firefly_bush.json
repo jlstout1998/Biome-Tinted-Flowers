@@ -1,0 +1,7 @@
+{
+  "parent": "tintedflowers:block/tintable_cross_emissive",
+  "textures": {
+    "cross": "tintedflowers:block/firefly_bush",
+    "cross_emissive": "minecraft:block/firefly_bush_emissive"
+  }
+}

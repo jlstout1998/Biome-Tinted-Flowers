@@ -1,0 +1,7 @@
+{
+  "parent": "tintedflowers:block/tintable_cross_with_overlay",
+  "textures": {
+    "cross": "tintedflowers:block/sweet_berry_bush_stage2_crop",
+    "tint": "tintedflowers:block/sweet_berry_bush_stage2_tint"
+  }
+}
