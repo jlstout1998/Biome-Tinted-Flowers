@@ -2,6 +2,6 @@
   "parent": "tintedflowers:block/tintable_crop_with_overlay",
   "textures": {
     "crop": "tintedflowers:block/beetroots_stage3_crop",
-    "overlay": "tintedflowers:block/beetroots_stage_3_tint"
+    "overlay": "tintedflowers:block/beetroots_stage3_tint"
   }
 }
