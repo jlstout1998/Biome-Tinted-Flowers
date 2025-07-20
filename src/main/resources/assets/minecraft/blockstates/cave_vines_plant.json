@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "tintedflowers:block/cave_vines_plant"
+    },
+    "berries=true": {
+      "model": "tintedflowers:block/cave_vines_plant_lit"
+    }
+  }
+}
