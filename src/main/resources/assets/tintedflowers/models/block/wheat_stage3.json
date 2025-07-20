@@ -1,0 +1,6 @@
+{
+  "parent": "tintedflowers:block/tintable_crop",
+  "textures": {
+    "crop": "tintedflowers:block/wheat_stage3"
+  }
+}

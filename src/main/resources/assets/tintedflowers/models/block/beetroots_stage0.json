@@ -1,0 +1,6 @@
+{
+  "parent": "tintedflowers:block/tintable_crop",
+  "textures": {
+    "crop": "tintedflowers:block/beetroots_stage0"
+  }
+}

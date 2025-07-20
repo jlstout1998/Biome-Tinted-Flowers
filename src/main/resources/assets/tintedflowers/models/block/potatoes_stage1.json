@@ -1,0 +1,7 @@
+{
+  "parent": "tintedflowers:block/tintable_crop_with_overlay",
+  "textures": {
+    "crop": "tintedflowers:block/potatoes_stage1_crop",
+    "overlay": "tintedflowers:block/potatoes_stage1_tint"
+  }
+}
