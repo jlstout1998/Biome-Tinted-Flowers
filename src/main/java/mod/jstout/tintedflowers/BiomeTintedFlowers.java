@@ -9,8 +9,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
 
-import java.util.List;
 import java.util.Set;
 
 public class BiomeTintedFlowers implements ClientModInitializer {
@@ -34,7 +34,7 @@ public class BiomeTintedFlowers implements ClientModInitializer {
     }
 
     @Override
-    public Set<java.util.Set<?>> relevantProperties() {
+    public Set<Property<?>> relevantProperties() {
       return Set.of();
     }
   };
