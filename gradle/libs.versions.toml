@@ -11,4 +11,4 @@ fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabricLo
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric" }
 
 [plugins]
-loomID = { id = "fabric-loom", version.ref = "loom" }
+loomID = { id = "net.fabricmc.fabric-loom", version.ref = "loom" }
